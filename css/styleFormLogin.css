@@ -1,0 +1,155 @@
+
+.mulish{
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+}
+
+body{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+main{
+    background-image: linear-gradient(to bottom, #33383D, #1C1D20);
+    display: inline;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#login{
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    width: 50vw;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+#images{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 50%;
+}
+
+#image-01{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    background-image: url("../image/Mask\ Group.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 940px;
+    height: 1055px;
+    left: 980px;
+}
+
+body img{
+    top: 36px;
+    left: 1198px;
+    max-width: 484px;
+    max-height: 66px;
+    position: fixed;
+    display: block;
+    background-position:center;
+}
+
+ h1{
+    color:#ffff;
+    
+    width: 273px;
+    height: 75px;
+    margin-top: 197px;
+    margin-left:287px;
+    position: absolute;
+    display: inline;
+    font-family: Mulish;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 75px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+ p{
+    color:#ffff;
+    position: absolute;
+    display: inline;
+    font-family: Mulish;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    width: 301px;
+    height: 52px;
+    top: 290px;
+    left: 287px;
+}
+
+#login h2{
+    color: #ffff;
+    position: relative;
+    display: inline;
+    width: 77px;
+    height: 38px;
+    top:477px;
+    left: 287px;
+    font-family: Mulish;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+#login form label{
+    display:none;
+}
+
+#login form input{
+    width: 379px;
+    height: 60px;
+    top: 547px;
+    left: 285px;
+    position: relative;
+    display:grid;
+    border-radius: 50px;
+    margin-bottom: 15px;
+}
+
+#login form ::placeholder{
+    left: 305px;
+    top: 567px;
+    width: 78px;
+    height: 20px;
+    font-size: 16px;
+    font: "Mulish";
+    color: #000000;
+    letter-spacing: 0%;
+    text-shadow: 25% black;
+    right: 2px;
+}
+
+
+button{
+    width: 379px;
+    height: 67px;
+    top: 815px;
+    left: 285px;
+    border: none;
+    background-image: linear-gradient(to bottom, #FF2D04, #C13216);
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 50px;
+    position: absolute;
+    display: inline-flexbox;
+}
