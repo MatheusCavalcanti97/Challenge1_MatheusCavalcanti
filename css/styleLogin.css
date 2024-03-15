@@ -1,0 +1,166 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    font-family: "Mulish", sans-serif;
+    box-sizing: border-box;
+}
+
+#container{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(to bottom, #33383D, #1C1D20);
+    display: table-row;
+}
+
+#container-1{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    display: inline-block;
+}
+
+#container-2{
+    display: flex;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    float: right;
+}
+
+.image-logo-compass{
+    display: flex;
+    position: absolute;
+    width: 484px;
+    height: 66px;
+    top: 11px;
+    left: 213px;
+    align-items: center;
+    
+}
+
+.image-logo-compass img{
+    width: 484px;
+    height: 66px;
+    top: 11px;
+    left: 213px;
+   
+}
+
+#container-1 h1{
+    width: 273px;
+    height: 75px;
+    top: 197px;
+    left: 287px;
+    color: #ffffff;
+    position: relative;
+    font-size: 60px;
+}
+
+#container-1 p{
+    position: relative;
+    width: 301px;
+    height: 52px;
+    top:290px;
+    left: 287px;
+    color: #ffffff;
+}
+
+img{
+    width: 940px;
+    height: 1055px;
+    left: 980px;
+}
+
+#register{
+    background-color: transparent;
+    padding: 15px;
+    top: 500px;
+    width: 450px;
+    height: 500px;
+    left: 285px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    overflow: hidden;
+}
+
+form{
+    padding: 0px;
+    width: 500px;
+    align-items: center;
+    display: block;
+}
+
+.buttonForm{
+    align-items: center;
+    top: 80px;
+    height: 600;
+    position: relative;
+    align-items: center;
+    padding: 0px;
+}
+
+
+#register img{
+    height: 20px;
+    width: 20px;
+    padding: 0px;
+    align-items: center;        
+    margin-left: 20px;
+}
+
+
+input[type="text"], input[type="password"]{
+    width: 379px;
+    height: 60px;
+    top: 547px;
+    left: 285px;
+    border-radius: 50px;
+    border: 1px solid #ffffff;
+    background: transparent;
+}
+
+form ::placeholder{
+    color:#ffffff;
+    padding: 2px 15px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+
+button[type="submit"]{
+    position: relative;
+    display: block;
+    width: 379px;
+    height: 67px;
+    top: 15px;
+    border-radius: 50px;
+    border: 2px;
+    text-align: center;
+    background-image: linear-gradient(to bottom, #FF2D04,#C13216 );
+    font-family: "Mulish", sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+button[type="register"]{
+    position: relative;
+    display: block;
+    width: 379px;
+    height: 67px;
+    top: 25px;
+    border-radius: 50px;
+    border: 2px;
+    text-align: center;
+    background-image: linear-gradient(to bottom, #FF2D04,#C13216);
+    font-family: "Mulish", sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+}
