@@ -17,7 +17,6 @@
 }
 
 #container-1-register{
-  
     width: 50%;
     height: 100%;
     position: absolute;
@@ -54,7 +53,7 @@
 }
 
 #container-register h1{
-    position: sticky;
+    position: relative;
     width: 273px;
     height: 75px;
     top: 94px;
@@ -66,7 +65,7 @@
 }
 
 #container-register p{
-    position: sticky;
+    position: absolute;
     width: 301px;
     height: 24px;
     top:169px;
@@ -80,3 +79,67 @@ img{
     height: 1080px;
     left: 980px;
 }
+
+#form-register{
+    top: 150px;
+    width: 600px;
+    height: 700px;
+    left: 285px;
+    display: inline-block;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+#form-register form {
+    width: 550px;
+    height: 700px;
+    position: absolute;
+    display: inline-block;
+}
+
+#form-register div {
+    margin: 10px;
+    display: grid;
+    grid-gap: 10px;
+
+}
+
+form label{
+    color: #E0E0E0;
+    size: 16px;
+    line-height: 20px;
+    font-family: "Mulish", sans-serif;
+    left: 296px;
+    margin-right: 10px;
+    justify-content: space-between;
+    display: inline-flex;
+    position: inherit;
+}
+
+input[type="text"]{
+    width: 379px;
+    height: 60px;
+    top: 266px;
+    left: 388px;
+    border-radius: 50px;
+    border: 1px solid #ffffff;
+
+    background-color: #26292C;
+}
+
+button[type="submit"]{
+    position: relative;
+    border-radius: 50px;
+    background-image: linear-gradient(to bottom, #FF2D04,#C13216);
+    border: 2px;
+    width: 379px;
+    height: 67px;
+    top: 968px;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 32px;
+    font-family: "Mulish", sans-serif;
+}
+
+
