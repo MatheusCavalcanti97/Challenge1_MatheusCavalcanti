@@ -17,39 +17,38 @@
 
             <div id="div-register">
 
-                <form action="registerNewUser" id="cadastrarPerson">
+                <form id = "formUser">
 
                 <div class="info"><label for="first-name">first name</label>
-                <input id="first-name" value="Your First Name" type="text"></div>
+                <input id="first-name" placeholder="Your First Name" type="text" name="firstName"></div>
                 
                 <div class="info"><label for="last-name">last name</label>
-                <input id="last-name" value="Your Last Name" type="text"></div>
+                <input id="last-name" placeholder="Your Last Name" type="text" name="lastName"></div>
                   
                 <div class="info"><label for="birth-date">birth date</label>
-                <input id="birth-date" value="MM/DD/YYYY" type="text"></div>
+                <input id="birth-date" placeholder="MM/DD/YYYY" type="text" name="birthDate"></div>
                  
                 <div class="info"><label for="country">Country<span>A</span></label>
-                <input id="country" value="Your County" type="text"></div>
+                <input id="country" placeholder="Your County" type="text" name="countryUser"></div>
                   
                 <div class="info"><label for="city">City<span>Aaaa</span></label>
-                <input id="city" value="Your city" type="text"></div>
+                <input id="city" placeholder="Your city" type="text" name="cityUser"></div>
                   
                 <div class="info"><label for="email">e-mail<span>AA</span></label>
-                <input id="email" type = "text" value="A valid e-mail here"></div>
+                <input id="email" type = "text" placeholder="A valid e-mail here" name="emailUser"></div>
                   
                 <div class="info"><label for="password">password</label>
-                <input id="password" type="text" value="password"></div>
+                <input id="password" type="text" placeholder="password" name="passwordUser"></div>
 
                 <div class="info"><label for="password-confirmation">password</label>
-                <input id="password-confirmation" type="text" value="Confirm your password"></div>
+                <input id="password-confirmation" type="text" placeholder="Confirm your password"></div>
                   
-                </form>
-
+                
                 <div class="registerUser">
-                  <button type="submit">Register Now</button>
+                  <button id="btnSalvar" type="submit">Register Now</button>
                 </div>
+                </form>
             </div>
-            
           </div>
   
           <div id="container-2-register">
@@ -62,6 +61,6 @@
         </div>
         </div>
       </main>
-    
+      <script src="../js/login.js" defer></script>
 </body>
 </html>
