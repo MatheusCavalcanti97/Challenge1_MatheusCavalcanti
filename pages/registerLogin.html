@@ -17,35 +17,35 @@
 
             <div id="div-register">
 
-                <form id = "formUser">
+                <form id = "formUser" action="../pages/registerLogin.html" method="dialog">
 
                 <div class="info"><label for="first-name">first name</label>
-                <input id="first-name" placeholder="Your First Name" type="text" name="firstName"></div>
+                <input id="first-name" placeholder="Your First Name" type="text" name="firstName" value=""  required></div>
                 
                 <div class="info"><label for="last-name">last name</label>
-                <input id="last-name" placeholder="Your Last Name" type="text" name="lastName"></div>
+                <input id="last-name" placeholder="Your Last Name" type="text" name="lastName" value="" required></div>
                   
                 <div class="info"><label for="birth-date">birth date</label>
-                <input id="birth-date" placeholder="MM/DD/YYYY" type="text" name="birthDate"></div>
+                <input id="birth-date" placeholder="MM/DD/YYYY" type="text" name="birthDate" value="" required></div>
                  
                 <div class="info"><label for="country">Country<span>A</span></label>
-                <input id="country" placeholder="Your County" type="text" name="countryUser"></div>
+                <input id="country" placeholder="Your County" type="text" name="countryUser" value="" required></div>
                   
                 <div class="info"><label for="city">City<span>Aaaa</span></label>
-                <input id="city" placeholder="Your city" type="text" name="cityUser"></div>
+                <input id="city" placeholder="Your city" type="text" name="cityUser" value="" required></div>
                   
                 <div class="info"><label for="email">e-mail<span>AA</span></label>
-                <input id="email" type = "text" placeholder="A valid e-mail here" name="emailUser"></div>
+                <input id="email" type = "text" placeholder="A valid e-mail here" name="emailUser" value="" required></div>
                   
                 <div class="info"><label for="password">password</label>
-                <input id="password" type="text" placeholder="password" name="passwordUser"></div>
+                <input id="password" type="text" placeholder="password" name="passwordUser" value="" required></div>
 
                 <div class="info"><label for="password-confirmation">password</label>
-                <input id="password-confirmation" type="text" placeholder="Confirm your password"></div>
+                <input id="password-confirmation" type="text" placeholder="Confirm your password" value="" required></div>
                   
                 
                 <div class="registerUser">
-                  <button id="btnSalvar" type="submit">Register Now</button>
+                  <button type="submit">Register Now</button>
                 </div>
                 </form>
             </div>
