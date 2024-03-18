@@ -20,22 +20,52 @@ function verificaData(c) {
   return dateValid;
 }
 
-function verificaEmail(d){
+function verificaEmail(d) {
   const validaEmail = /\S+@\S+\.\S+/;
-  const emailValid =  validaEmail.test(d);
+  const emailValid = validaEmail.test(d);
   return emailValid;
 }
 
 formUser.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const fName = document.getElementById("first-name").value;
-  const lName = document.getElementById("last-name").value;
+  const fNameUser = document.getElementById("first-name").value;
+  const lNameUser = document.getElementById("last-name").value;
   const bDateUser = document.getElementById("birth-date").value;
   const countryUser = document.getElementById("country").value;
   const cityUser = document.getElementById("city").value;
-  const emailUser = document.getElementById("email").value;
+  const emailU = document.getElementById("email").value;
   const passwordUser = document.getElementById("password").value;
+  const confirmationPasswordUser = document.getElementById("password-confirmation").value;
+
+  const loginU = new Login(emailU, passwordUser);
+  const pessoa = new Pessoa(fNameUser,lNameUser,bDateUser,countryUser,cityUser,loginU);
+
+  if (verificaNomes(fNameUser) == true) {
+    if (verificaNomes(lNameUser) == true) {
+      if (verificaData(bDateUser) == true) {
+        if (verificaNomes(cityUser) == true) {
+          if (verificaEmail(emailU) == true) {
+            if (verificaSenha(passwordUser) == true) {
+              jaExisteUser(pessoa, confirmationPasswordUser);
+            } else {
+              console.log("senha deu errado!");
+            }
+          } else {
+            console.log("deu errado 02");
+          }
+        } else {
+          console.log("deu errado 03");
+        }
+      } else {
+        console.log("deu errado 04");
+      }
+    } else {
+      console.log("deu errado 05");
+    }
+  } else {
+    console.log("deu errado 06");
+  }
 
   document.getElementById("first-name").value = "";
   document.getElementById("last-name").value = "";
@@ -45,43 +75,43 @@ formUser.addEventListener("submit", (e) => {
   document.getElementById("email").value = "";
   document.getElementById("password").value = "";
   document.getElementById("password-confirmation").value = "";
-
-  const login = new Login(emailUser, passwordUser);
-  const pessoa = new Pessoa(fName, lName, bDateUser, countryUser, cityUser, login);
-
-  if(verificaNomes(fName) == true){
-    if(verificaNomes(lName) == true){
-      if(verificaData(bDateUser) == true){
-        if(verificaNomes(cityUser)){
-          if(verificaEmail(emailUser)){
-            if(verificaSenha(passwordUser)){
-              if(localStorage.hasOwnProperty("meusRegistrosUsers")){
-                console.log("NÃO FOI CRIADO!")
-                meusRegistrosUsers = JSON.parse(localStorage.getItem("meusRegistrosUsers"));
-              } else{
-                console.log("JÁ CRIADO! SÓ ADD!")
-                meusRegistrosUsers.push(pessoa);
-                localStorage.setItem("meusRegistrosUsers", JSON.stringify(meusRegistrosUsers));
-              }
-            } else{
-              console.log("senha deu errado!");
-            }
-          } else{
-            console.log("deu errado 02");
-          }
-        } else{
-          console.log("deu errado 03");
-        }
-      } else{
-        console.log("deu errado 04");
-      }
-    } else{
-      console.log("deu errado 05");
-    }
-  } else{
-    console.log("deu errado 06");
-  }
 });
+
+function jaExisteUser(pessoa, confirmationPasswordUser) {
+  let vE = true;
+  let vP = true;
+  if (localStorage.hasOwnProperty("meusRegistrosUsers")) {
+    meusRegistrosUsers = JSON.parse(localStorage.getItem("meusRegistrosUsers"));
+  }
+
+  if (meusRegistrosUsers.length == 0) {
+    console.log("entrou aqui");
+    meusRegistrosUsers.push(pessoa);localStorage.setItem("meusRegistrosUsers",JSON.stringify(meusRegistrosUsers));
+  }
+
+  if (meusRegistrosUsers.length != 0) {
+    for(let i = 0; i < meusRegistrosUsers.length; i++){
+      if(meusRegistrosUsers[i].login.email == pessoa.login.email){
+        vE = true;
+      } else{
+        vE = false;
+      }
+    }
+    if(pessoa.login.password == confirmationPasswordUser){
+      vP = true;
+    } else{
+      vP = false;
+    }
+
+    if(vE ==  false && vP == true){
+      meusRegistrosUsers.push(pessoa);
+      localStorage.setItem("meusRegistrosUsers", JSON.stringify(meusRegistrosUsers));
+    } else{
+      console.log("NÃO ADICIONADO! USUARIO JÁ CADASTRADO!");
+    }
+  }
+
+}
 
 class Login {
   constructor(email, password) {
